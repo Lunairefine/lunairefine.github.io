@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Galaxy";
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url(https://galxestatic.com/w/s/1b47ad3/fonts/galaxy.a33a70b.ttf) format("truetype")
+}
+
+@font-face {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://galxestatic.com/w/s/1b47ad3/fonts/inter-regular.2391725.ttf) format("truetype")
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(5px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: Galaxy;
+  margin-bottom: 1px;
+}
+
+.headline {
+  animation-name: headlineColor;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes headlineColor {
+  0% { color: #10FF9B; }
+  100% { color: rgb(153, 69, 255); }
+  50% { color: #2EDEF0; }
+}
+
+p {
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  color: white;
+  margin-top: 1px;
+}
+
+.buttonNext {
+  margin-top: 5px;
+  color: white;
+  
+}
+
+button {
+  text-align: center;
+  padding: 6px 15px;
+  border-color: white;
+  border-size: 2px;
+  border-radius: 8px;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 12px;
+  display: flex;
+  background: black;
+  /* background: rgb(153, 69, 255); */
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+
+}
+
+a {
+  text-decoration: none;
+}
