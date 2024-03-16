@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "kaisei";
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url(assets/font.ttf) format("truetype")
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ///////////////////////////////////////////// */
+
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-size: 6px;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-family: kaisei;
+}
+
+Image {
+  align-items: center;
+  margin: 20px;
+
+}
+
+button {
+  border: 1px solid #ffffff;
+  text-align: center;
+  border-color: black;
+  border-size: 1px;
+  border-radius: 12px;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  align-items: center;
+  margin-top: 80px;
+}
