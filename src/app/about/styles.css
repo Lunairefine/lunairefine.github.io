@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "kaisei";
+  font-style: bold;
+  font-weight: 500;
+  font-display: block;
+  src: url(../assets/font.ttf) format("truetype")
+}
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+  ::-webkit-scrollbar {
+    display: none; /* Untuk browser yang menggunakan engine WebKit seperti Chrome, Safari */
+  }
+
+/* -============================ */
+.header {
+    background-color: white;
+    padding: 10px 10px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+  }
+
+.logo {
+    display: flex;
+    align-items: center; 
+  }
+
+.logo1 {
+    margin-right: 10px;
+    padding: 0px;
+    border-size: 1px;
+    border-radius: 8px;
+  }
+
+.home {
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: kaisei;
+}
+
+.home:last-child {
+    margin-right: 0;
+  }
+
+/* ========================================= */
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item {
+    margin-right: 20px;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+
+.menu-item:last-child {
+    margin-right: 0;
+  }
+
+a {
+    text-decoration: none;
+  }
+
+/* ============== Content =================== */
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner {
+  border: 1px solid white;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.pfp {
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: -3rem;
+}
+
+/* ======================== */
+.details {
+  text-align: center;
+  margin-top: 2rem;
+  
+}
+
+.username {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-family: Roboto Serif;
+  font-size: 27px;
+
+}
+
+.desc {
+  font-family: Inter;
+  font-size: 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0 auto; /* Mengatur margin vertikal ke 0 dan horizontal ke auto */
+  width: 80%;
+}
+
+.introduce {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.horizontal-line {
+  border-top: 2px solid #acacac; /* Membuat garis horizontal berwarna hitam dengan ketebalan 1 piksel */
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* ========================================== */
+
+.exp {
+  margin-left: 8%;
+  font-size: 20px;
+  margin-top: 3px;
+}
+
+
+.content2 {
+  display: flex;
+  justify-content: center;
+}
+
+.exp1 {
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.exp-asset {
+   margin-bottom: 1px;
+}
+
+.idpro {
+  /* text-align: center; */
+  margin-top: 2px;
+  margin-bottom: 1px;
+}
