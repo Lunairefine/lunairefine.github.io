@@ -1,18 +1,18 @@
 import Image from "next/image";
-import banner from './assets/banner.png';
+import banner from './assets/lunaire.png';
 import styles from './landing.css';
 
 export default function Home() {
   return (
     <div class="container">
-        <h1>ルナイルファイヌ</h1>
-        <Image src={banner} alt="lunairefine" className=" mx-auto" width={500} height={500}/>
+        <h1 class="landingh1">ルナイルファイヌ</h1>
+        <Image src={banner} alt="lunairefine" className=" mx-auto" width={350} height={350}/>
         <div className="flex items-center justify-center">
           <a href="/error">
-            <button className="bg-white text-black border border-black px-3 py-0.3 item ">Explore</button>
+            <button className="bg-black text-white border border-white px-3 py-0.3 item ">Explore</button>
           </a>
         </div>
-        <h2>Powered by 大魔導士研究所</h2>
+        <h2 class="landingh2">Powered by Gardasys.</h2>
     </div>
   );
 }

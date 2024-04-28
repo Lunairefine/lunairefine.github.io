@@ -9,7 +9,7 @@
 body, html {
     margin: 0px;
     padding: 0px;
-    height: 100%;
+    background: black;
 }
 
   ::-webkit-scrollbar {
@@ -18,12 +18,14 @@ body, html {
 
 /* -============================ */
 .header {
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 10px 10px;
-    padding-right: 30px;
+    /* padding-right: 30px; */
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
   }
 
 .logo {
@@ -39,29 +41,30 @@ body, html {
   }
 
 .home {
-    color: black;
+    color: white;
     font-size: 1rem;
     font-weight: bold;
     font-family: kaisei;
 }
-
-.home:last-child {
-    margin-right: 0;
-  }
 
 /* ========================================= */
 
 .menu {
     display: flex;
     align-items: center;
+    margin-right: 30px;
 }
 
 .menu-item {
-    margin-right: 20px;
-    color: black;
+    margin-right: 30px;
+    color: white;
     font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 0px;
+    /* font-weight: bold; */
+    text-decoration: none;
+    background: rgb(38, 38, 38);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px 20px;
   }
 
 .menu-item:last-child {
@@ -78,26 +81,27 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
+
 
 .banner {
   border: 1px solid white;
   border-radius: 0px 0px 40px 40px;
+  width: 100%;
 }
 
 .pfp {
   border-radius: 100px;
   display: flex;
   justify-content: center;
-  margin-top: -3rem;
+  margin-top: 3rem;
 }
 
 /* ======================== */
 .details {
   text-align: center;
   margin-top: 2rem;
-  
+  color: white;
 }
 
 .username {
@@ -122,11 +126,13 @@ a {
   display: flex;
   margin: 0 auto; /* Mengatur margin vertikal ke 0 dan horizontal ke auto */
   width: 80%;
+  color: white;
 }
 
 .introduce {
   margin-top: 2rem;
   margin-bottom: 3rem;
+  text-align: justify;
 }
 
 .horizontal-line {
@@ -140,20 +146,27 @@ a {
 .exp {
   margin-left: 8%;
   font-size: 20px;
-  margin-top: 3px;
+  /* margin-top: 3px; */
+  color: white;
 }
 
+.chevron {
+  display: inline-block;
+  overflow: hidden;
+}
 
 .content2 {
   display: flex;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 
 .exp1 {
-  margin: 1rem;
+  /* margin-left: 0px; */
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-left: 4px;
 }
 
 .exp-asset {
@@ -161,7 +174,30 @@ a {
 }
 
 .idpro {
-  /* text-align: center; */
+  text-align: center;
   margin-top: 2px;
   margin-bottom: 1px;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+.footer-line {
+  border-top: 2px solid #acacac; /* Membuat garis horizontal berwarna hitam dengan ketebalan 1 piksel */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.copy {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 1rem;
 }
