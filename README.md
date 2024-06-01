@@ -1,1 +1,1 @@
-## Kenapa lu sampe sini? Pulang sana
+## Kenapa lu sampe sini? Pulang sana. Kurang kerjaan bat nyampe sini
