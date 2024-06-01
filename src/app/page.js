@@ -1,6 +1,6 @@
-import Image from "next/image";
+import style from './style.css'
+import Image from 'next/image';
 import banner from './assets/lunaire.png';
-import styles from './landing.css';
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
             <button className="bg-black text-white border border-white px-3 py-0.3 item ">Explore</button>
           </a>
         </div>
-        <h2 class="landingh2">Powered by Gardasys.</h2>
+        <h2 class="landingh2">© 2024 Lunairefine.eth</h2>
     </div>
   );
 }

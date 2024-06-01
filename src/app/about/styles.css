@@ -1,106 +1,15 @@
-@font-face {
-  font-family: "kaisei";
-  font-style: bold;
-  font-weight: 500;
-  font-display: block;
-  src: url(../assets/font.ttf) format("truetype")
-}
-
-body, html {
-    margin: 0px;
-    padding: 0px;
-    background: black;
-}
-
-  ::-webkit-scrollbar {
-    display: none; /* Untuk browser yang menggunakan engine WebKit seperti Chrome, Safari */
-  }
-
-/* -============================ */
-.header {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px 10px;
-    /* padding-right: 30px; */
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-  }
-
-.logo {
-    display: flex;
-    align-items: center; 
-  }
-
-.logo1 {
-    margin-right: 10px;
-    padding: 0px;
-    border-size: 1px;
-    border-radius: 8px;
-  }
-
-.home {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    font-family: kaisei;
-}
-
-/* ========================================= */
-
-.menu {
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-}
-
-.menu-item {
-    margin-right: 30px;
-    color: white;
-    font-size: 1rem;
-    /* font-weight: bold; */
-    text-decoration: none;
-    background: rgb(38, 38, 38);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px 20px;
-  }
-
-.menu-item:last-child {
-    margin-right: 0;
-  }
-
-a {
-    text-decoration: none;
-  }
-
-/* ============== Content =================== */
-
-.content {
-  display: flex;
+.pfp {
+  border-radius: 30px;
+  margin-top: 10px;
+  border: 2px solid black;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
-
-.banner {
-  border: 1px solid white;
-  border-radius: 0px 0px 40px 40px;
-  width: 100%;
-}
-
-.pfp {
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-/* ======================== */
 .details {
   text-align: center;
-  margin-top: 2rem;
+  /* margin-left: 200px; */
   color: white;
 }
 
@@ -108,14 +17,21 @@ a {
   font-weight: bold;
   margin-bottom: 6px;
   font-weight: bold;
-  font-family: Roboto Serif;
+  font-family: Inter;
   font-size: 27px;
+  margin: 0;
+}
 
+.id {
+  font-weight: 100;
+  font-family: roboto;
+  margin: 0;
 }
 
 .desc {
   font-family: Inter;
   font-size: 20px;
+  margin: 0;
 }
 
 .intro {
@@ -125,8 +41,9 @@ a {
   align-items: center;
   display: flex;
   margin: 0 auto; /* Mengatur margin vertikal ke 0 dan horizontal ke auto */
-  width: 80%;
+  width: 75%;
   color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .introduce {
@@ -135,69 +52,41 @@ a {
   text-align: justify;
 }
 
-.horizontal-line {
-  border-top: 2px solid #acacac; /* Membuat garis horizontal berwarna hitam dengan ketebalan 1 piksel */
-  width: 85%;
-  margin: 0 auto;
-}
-
 /* ========================================== */
-
-.exp {
-  margin-left: 8%;
-  font-size: 20px;
-  /* margin-top: 3px; */
+.NE {
+  text-align: center;
   color: white;
+  margin: 0px;
 }
 
-.chevron {
-  display: inline-block;
-  overflow: hidden;
+.horizontal-line {
+  border: none;
+  height: 5px;
+  background-color: #10B68E;
+  margin: 2px; 
+  width: 10%;
+  width: 10%;
+  margin-left: 45%;
+  margin-top: 5px;
+  margin-bottom: 30px;
 }
 
 .content2 {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-
-.exp1 {
-  /* margin-left: 0px; */
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-left: 4px;
-}
-
-.exp-asset {
-   margin-bottom: 1px;
-}
-
-.idpro {
-  text-align: center;
-  margin-top: 2px;
-  margin-bottom: 1px;
-  color: white;
-}
-
-a {
-  color: white;
-}
-
-.footer-line {
-  border-top: 2px solid #acacac; /* Membuat garis horizontal berwarna hitam dengan ketebalan 1 piksel */
   width: 100%;
-  margin: 0 auto;
+  overflow-x: auto; /* Membuat scroll horizontal */
+  white-space: nowrap; /* Mengatur agar elemen-elemen tetap dalam satu baris */
+  -webkit-overflow-scrolling: touch;
 }
 
-.footer {
-  margin-top: 3rem;
-  text-align: center;
-  margin-bottom: 1rem;
+.gambar-container {
+  display: inline-block;
+  white-space: nowrap; /* Mencegah wrap dalam satu baris */
 }
 
-.copy {
-  text-align: center;
-  align-items: center;
-  margin-bottom: 1rem;
+.gambar {
+  width: 200px; /* Sesuaikan ukuran gambar */
+  height: 200px;
+  background-color: #ccc; /* Ganti dengan background gambar Anda */
+  margin-right: 10px; /* Beri jarak antar gambar */
+  display: inline-block; /* Mengatur agar gambar-gambar itu berada dalam satu baris */
 }

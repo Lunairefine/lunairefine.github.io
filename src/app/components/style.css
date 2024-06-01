@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "kaisei";
+    font-style: bold;
+    font-weight: 500;
+    font-display: block;
+    src: url(../assets/font.ttf) format("truetype")
+  }
+
+  @font-face {
+    font-family: "aeonik pro";
+    src: url(../assets/aeonikpro.otf);
+  }
+  
+  body, html {
+    margin: 0px;
+    padding: 0px;
+    background: black;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none; /* Untuk browser yang menggunakan engine WebKit seperti Chrome, Safari */
+  }
+  
+  /* -============== HEADER AWAL ============== */
+  .header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    /* position: fixed; */
+    width: 100;
+    z-index: 1000;
+    border-bottom: 1px solid rgb(56, 56, 56);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center; 
+    margin-left: 5px;
+  }
+  
+  .logo1 {
+    margin-right: 10px;
+    padding: 0px;
+    /* border-size: 1px; */
+    border-radius: 8px;
+  }
+  
+  .home {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: "kaisei";
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .menu-item {
+    margin-right: 20px;
+    color: white;
+    font-size: 1rem;
+      /* font-weight: bold; */
+    text-decoration: none;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px 20px;
+    font-family: "aeonik pro";
+  }
+  
+  .menu-item:last-child {
+    margin-right: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+
+  /* ================================================= */
+  /* CSS lainnya tetap sama */
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .menu-item {
+    margin: 10px 0;
+  }
+}
+
+/* =============================== */
+
+/* CSS lainnya tetap sama */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .menu-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    position: absolute;
+    top: 60px; /* Sesuaikan dengan tinggi header */
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu-item {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

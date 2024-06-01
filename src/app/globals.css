@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "kaisei";
+    font-style: bold;
+    font-weight: 500;
+    font-display: block;
+    src: url(./assets/font.ttf) format("truetype")
+  }
+  
+body, html {
+    margin: 0px;
+    padding: 0px;
+    background: black;
+  }
+  
+::-webkit-scrollbar {
+    display: none; /* Untuk browser yang menggunakan engine WebKit seperti Chrome, Safari */
+  }

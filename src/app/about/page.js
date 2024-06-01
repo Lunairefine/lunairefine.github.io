@@ -1,66 +1,52 @@
 import Image from "next/image";
-import styles from './styles.css'
-import logo from './logo.png';
+import styles from './styles.css';
+import pfp from './assets/pfp.png';
 import banner from './assets/banner.png';
-import pfp from './assets/lunairefine.png';
-import projectId1 from './assets/polygon.png'
-import projectId2 from './assets/aptos.png'
-import projectId3 from './assets/arbitrum.png'
+import Header from "../components/header.js";
 
 export default function Page() {
     return (
       <div class="about">
-        <div class="header">
-        <div class="logo">
-          <Image src={logo} alt="lunairefine" class="logo1" width={35} height={35}/>
-          <a class="home" href="#">ルナイルファイヌ</a>
-        </div>
-          <div class="menu">
-            <a class="menu-item" href="#">About</a>
-            <a class="menu-item" href="project">Project</a>
-            <a class="menu-item" href="https://t.me/lunairefine">Contact</a>
-          </div>
-        </div>
-        <div class="content">
-          {/* <Image src={banner} alt="lunairefine" class="banner"/> */}
-        </div>
+        <Header/>
         <div class="pfp">
           <Image src={pfp} alt="lunairefine" class="pfp" height={180} width={180}/>
         </div>
         <div class="details">
           <h2 class="username">Lunairefine</h2>
-          <a class="desc">Research & Testnet Operator</a>
+          <a class="desc">IT Analyst & BetaTester</a>
         </div>
         <div class="intro">
-          <a class="introduce">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</a>
+          <a class="introduce">As an experienced Web3 user, I have delved into various aspects such as DeFi, Staking, Hunter Airdrop, and BetaTest Protocol. With extensive experience exploring blockchain networks like Solana, Ethereum, Binance, Optimism, Arbitrum, Aptos, Polygon, and Near. I have a deep understanding of the characteristics, strengths, and weaknesses of each network. With a solid portfolio of experience, I am ready to contribute to projects that drive innovation and growth in the blockchain ecosystem.</a>
         </div>
-        {/* <div class="horizontal-line">
+        <div class="N1">
+          <h2 class="NE">Network Experience</h2>
+          <hr class="horizontal-line"></hr>
+        </div>
+        {/* <div class="content2">
+            <div class="gambar-container">
+            <div class="gambar">
+            <Image src={pfp} alt="lunairefine" class="gambar"/>
+            </div>
+            <div class="gambar">
+            <Image src={pfp} alt="lunairefine" class="gambar"/>
+            </div>
+            <div class="gambar">
+            <Image src={pfp} alt="lunairefine" class="gambar"/>
+            </div>
+            <div class="gambar">
+            <Image src={pfp} alt="lunairefine" class="gambar"/>
+            </div>
+            <div class="gambar">
+            <Image src={pfp} alt="lunairefine" class="gambar"/>
+            </div>
+            <div class="gambar">
+            <Image src={pfp} alt="lunairefine" class="gambar"/>
+            </div>
+            <div class="gambar">
+            <Image src={pfp} alt="lunairefine" class="gambar"/>
+            </div>
+          </div>
         </div> */}
-        <div>
-          <h2 class="exp">EXPERIENCE
-          <i class="chevron" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right vue-feather__content"><polyline points="9 18 15 12 9 6"></polyline></svg></i>
-          </h2>
-        </div>
-        <div class="content2">
-          <div class="exp1">
-            <Image src={projectId1} alt="lunairefine" class="exp-asset" height={80} width={80}/>
-            <h3 class="idpro">Polygon</h3>
-            <a>Deployer NFT</a>
-          </div>
-          <div class="exp1">
-            <Image src={projectId2} alt="lunairefine" class="exp-asset" height={80} width={80}/>
-            <h3 class="idpro">Aptos</h3>
-            <a>As Tester on Nov</a>
-          </div>
-          <div class="exp1">
-            <Image src={projectId3} alt="lunairefine" class="exp-asset" height={80} width={80}/>
-            <h3 class="idpro">Arbitrum</h3>
-            <a>User and Tester</a>
-          </div>
-        </div>
-        <div class="footer">
-          <a class="copy">Powered by 大魔導士研究所</a>
-        </div>
       </div>
     );
   }
