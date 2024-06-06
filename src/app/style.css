@@ -18,6 +18,7 @@ body {
     align-items: center;
     height: 100vh;
     background: black;
+    overflow: hidden;
 }
 
 
@@ -31,7 +32,6 @@ body {
 .landingh1 {
   text-align: center;
   font-size: 3rem;
-  margin-size: 6px;
   padding-top: 2rem;
   padding-bottom: 1rem;
   font-family: kaisei;
@@ -41,13 +41,11 @@ body {
 Image {
   align-items: center;
   margin: 20px;
-
 }
 
 button {
   border: 1px solid #ffffff;
   text-align: center;
-  border-size: 1px;
   border-radius: 12px;
   font-family: Inter;
   font-weight: 500;
@@ -65,14 +63,12 @@ a {
 .landingh2 {
   text-align: center;
   align-items: center;
-  /* margin-top: 100px; */
   color: white;
   position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
   font-family : "DM Sans", sans-serif;
-
 }
