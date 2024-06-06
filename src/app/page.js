@@ -14,7 +14,7 @@ export default function Home() {
         <h1 class="landingh1">ルナイルファイヌ</h1>
           <Image src={banner} alt="lunairefine" className=" mx-auto" width={350} height={350}/>
             <div className="flex items-center justify-center">
-              <a href="/home">
+              <a href="/error">
               <button className="bg-black text-white border border-white px-3 py-0.3 item ">Explore</button>
               </a>
             </div>
