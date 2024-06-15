@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import logo from '../assets/logo.png';
-import style from './style.css';
+import './style.css';
 import { useState } from 'react';
 
 export default function Header() {
@@ -15,7 +15,7 @@ export default function Header() {
     <div class="header">
         <div class="logo">
             <Image src={logo} alt="lunairefine" class="logo1" width={40} height={40}/>
-            <a class="home" href="#">LUNAIRE.</a>
+            <a class="home" href="#">LUNAIREFINE.</a>
         </div>
         <div className="menu-container">
         <div className={`menu ${isMenuOpen ? 'open' : ''}`}>

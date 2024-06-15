@@ -1,9 +1,8 @@
-import Image from "next/image";
-import style from './style.css';
-import lunaimg from '../assets/lunaire.png';
+import './style.css';
 import Header from "../components/header.js";
-import Content1 from '../components/project1.js';
-import Content2 from '../components/project2.js'
+import Content1 from './components/project1.js';
+import Content2 from './components/project2.js';
+import Footer from '../components/footer.js'
 
 export default function Page() { 
     return (
@@ -11,6 +10,7 @@ export default function Page() {
             <Header/>
             <Content1/>
             <Content2/>
+            <Footer/>
         </div>
     )
 };

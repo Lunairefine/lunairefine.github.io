@@ -15,19 +15,18 @@
     margin: 0px;
     padding: 0px;
     background: black;
+    height: 100vh;
   }
   
   ::-webkit-scrollbar {
-    display: none; /* Untuk browser yang menggunakan engine WebKit seperti Chrome, Safari */
+    display: none;
   }
-  
-  /* -============== HEADER AWAL ============== */
+
   .header {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px 10px;
     display: flex;
     justify-content: space-between;
-    /* position: fixed; */
     width: 100;
     z-index: 1000;
     border-bottom: 1px solid rgb(56, 56, 56);
@@ -36,13 +35,12 @@
   .logo {
     display: flex;
     align-items: center; 
-    margin-left: 5px;
+    margin-left: 10px;
   }
   
   .logo1 {
     margin-right: 10px;
     padding: 0px;
-    /* border-size: 1px; */
     border-radius: 8px;
   }
   
@@ -59,17 +57,16 @@
     margin-right: 20px;
   }
   
-  .menu-item {
-    margin-right: 20px;
-    color: white;
-    font-size: 1rem;
-      /* font-weight: bold; */
-    text-decoration: none;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px 20px;
-    font-family: "aeonik pro";
-  }
+.menu-item {
+  margin-right: 20px;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px 20px;
+  font-family: "aeonik pro";
+}
   
   .menu-item:last-child {
     margin-right: 0;
@@ -78,10 +75,7 @@
   a {
     text-decoration: none;
   }
-  
 
-  /* ================================================= */
-  /* CSS lainnya tetap sama */
 
 @media (max-width: 768px) {
   .header {
@@ -104,10 +98,6 @@
     margin: 10px 0;
   }
 }
-
-/* =============================== */
-
-/* CSS lainnya tetap sama */
 
 .hamburger {
   display: none;
@@ -150,7 +140,7 @@
     align-items: center;
     display: none;
     position: absolute;
-    top: 60px; /* Sesuaikan dengan tinggi header */
+    top: 60px;
     right: 10px;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
@@ -168,4 +158,33 @@
   .hamburger {
     display: flex;
   }
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100;
+  z-index: 1000;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  text-align: center;
+  align-items: center;
+
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+}
+
+.foot-item {
+  margin-right: 20px;
+  color: rgb(170, 169, 169);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px 20px;
+  font-family: "aeonik pro";
 }

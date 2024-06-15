@@ -15,14 +15,10 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     height: 100vh;
-    background: black;
     overflow: hidden;
 }
-
-
-/* ///////////////////////////////////////////// */
 
 .container {
   margin: 0;
@@ -63,7 +59,7 @@ a {
 .landingh2 {
   text-align: center;
   align-items: center;
-  color: white;
+  color: rgb(170, 169, 169);
   position: fixed;
   left: 0;
   bottom: 0;
@@ -71,4 +67,22 @@ a {
   text-align: center;
   padding: 10px 0;
   font-family : "DM Sans", sans-serif;
+}
+
+/* 768 */
+@media screen and (max-width: 768px) {
+  .landingh1 {
+    margin-top: 50px;
+    color: red;
+    font-size: 40px;
+  }
+
+  Image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .landingh2 {
+    margin-top: 10px;
+  }
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import style from './project.css';
-import lunaimg from '../assets/lunaid.png'
+import './project.css';
+import lunaimg from '../../assets/lunaid.png'
 
 export default function content(){
     return(

@@ -1,12 +1,15 @@
-import Image from "next/image";
-import Header from '../components/header.js'
-import style from './page.css'
+import Header from '../components/header.js';
+import Footer from '../components/footer.js';
+import './page.css';
+import Landing from './components/landing.js'
+
 
 export default function Page() {
     return(
         <div class="container">
             <Header/>
-            <h1>TESTING</h1>
+            <Landing/>
+            <Footer/>
         </div>
     );
 }

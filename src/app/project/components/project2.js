@@ -1,6 +1,6 @@
 import Image from "next/image";
-import style from './project.css';
-import geoimg from '../assets/geoid.png'
+import './project.css';
+import geoimg from '../../assets/geoid.png'
 
 export default function Page() {
     return (
