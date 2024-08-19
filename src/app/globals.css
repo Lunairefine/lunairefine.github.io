@@ -31,3 +31,17 @@ body {
     text-wrap: balance;
   }
 }
+
+html, body {
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+html, body {
+  overflow: -moz-scrollbars-none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
