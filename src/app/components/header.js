@@ -70,7 +70,7 @@ export default function Header() {
             <a href="#home" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('home')}>Home</a>
             <a href="#about" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('about')}>About</a>
             <a href="#network" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('network')}>Network</a>
-            <a href="#project" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('project')}>Project</a>
+            {/* <a href="#project" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('project')}>Project</a> */}
           </nav>
 
           {/* Contact Button */}
@@ -89,7 +89,7 @@ export default function Header() {
             <a href="#landing" className="text-white text-xl hover:text-gray-300" onClick={() => handleScrollTo('landing')}>Home</a>
             <a href="#about" className="text-white text-xl hover:text-gray-300" onClick={() => handleScrollTo('about')}>About</a>
             <a href="#network" className="text-white text-xl hover:text-gray-300" onClick={() => handleScrollTo('network')}>Network</a>
-            <a href="#project" className="text-white text-xl hover:text-gray-300" onClick={() => handleScrollTo('project')}>Project</a>
+            {/* <a href="#project" className="text-white text-xl hover:text-gray-300" onClick={() => handleScrollTo('project')}>Project</a> */}
             <a href="https://t.me/lunairefine" className="bg-black text-white border border-white px-4 py-2 rounded-3xl shadow-md hover:bg-gray-800">Contact</a>
           </div>
         </div>

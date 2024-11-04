@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PFP from './assets/foto.jpg'
+import PFP from './assets/lunairefine.png'
 import Logo from './assets/logo.png';
 
 export default function Landing() {
