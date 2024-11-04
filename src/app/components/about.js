@@ -5,14 +5,12 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Title "About" */}
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-white">About</h2>
           <div className="mt-2 border-b-4 border-[#03a9fc] w-24 mx-auto"></div>
         </div>
 
         <div className="mt-10 flex flex-col lg:flex-row items-center">
-          {/* Image */}
           <div className="w-2/3 h-2/3 rounded-full overflow-hidden">
             <Image
               src={Foto}
@@ -24,7 +22,6 @@ export default function About() {
             />
           </div>
 
-          {/* Text */}
           <div className="lg:ml-10 mt-8 lg:mt-0 text-center lg:text-left">
             <h3 className="text-3xl font-extrabold text-white">Lunairefine</h3>
             <p className="mt-4 text-lg text-gray-400 text-justify">

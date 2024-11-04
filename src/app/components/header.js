@@ -27,7 +27,7 @@ export default function Header() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false); // Close mobile menu on item click
+      setIsOpen(false);
     }
   };
 
@@ -35,7 +35,6 @@ export default function Header() {
     <header className={`fixed top-0 left-0 w-full z-50 transition-opacity duration-300 ${isScrolled ? 'bg-black bg-opacity-50' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo and Name */}
           <div className="flex-shrink-0 flex items-center space-x-2">
             <a href="#landing" className="flex items-center space-x-2">
               <Image src={Logo} width={40} height={40} alt="Logo" className="rounded-lg"/>
@@ -43,7 +42,6 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Hamburger Menu Icon */}
           <div className="flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -64,8 +62,7 @@ export default function Header() {
               )}
             </button>
           </div>
-
-          {/* Navigation Menu for Desktop */}
+          
           <nav className="hidden md:flex flex-grow justify-center space-x-6">
             <a href="#home" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('home')}>Home</a>
             <a href="#about" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('about')}>About</a>
@@ -73,7 +70,6 @@ export default function Header() {
             {/* <a href="#project" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('project')}>Project</a> */}
           </nav>
 
-          {/* Contact Button */}
           <div className="hidden md:flex items-center ml-20">
             <a href="https://t.me/lunairefine" className="bg-black text-white border border-white px-4 py-2 rounded-3xl shadow-md hover:bg-gray-800">
               Contact
@@ -82,7 +78,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-black absolute top-16 left-0 w-full py-4">
           <div className="flex flex-col items-center space-y-6">
