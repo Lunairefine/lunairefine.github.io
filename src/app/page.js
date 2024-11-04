@@ -12,7 +12,7 @@ export default function Home() {
       <Landing id="landing"></Landing>
       <About id="about"></About>
       <Network id="network"></Network>
-      <Project id="project"></Project>
+      {/* <Project id="project"></Project> */}
     </div>
   )
 }
