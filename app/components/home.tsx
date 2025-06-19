@@ -7,23 +7,23 @@ export default function Landing(): JSX.Element {
   return (
     <section className="flex flex-col min-h-screen bg-black px-4 py-20 relative z-10">
       <div className="absolute inset-0 -z-10 overflow-hidden">
-  <div className="w-[500px] h-[450px] bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 opacity-30 blur-3xl rounded-full animate-aurora" style={{ top: '10%', left: '50%', transform: 'translateX(-50%)', position: 'absolute' }}></div>
+  <div className="w-[500px] h-[450px] bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 opacity-20 blur-3xl rounded-full animate-aurora" style={{ top: '10%', left: '50%', transform: 'translateX(-50%)', position: 'absolute' }}></div>
 </div>
       <div className="flex flex-col items-center justify-center flex-grow">
         <Image
           src={PFP}
           alt="lunairefine"
-          className="rounded-full w-40 h-40 object-cover mb-4 shadow-lg"
+          className="rounded-full w-40 h-40 object-cover mb-5 shadow-lg"
         />
-        <h1 className="text-2xl font-bold text-white mb-2">LUNAIREFINE</h1>
-        <p className="text-lg text-gray-400 text-center">
-          Demon Cultivator on Heavenly Network
+        <h1 className="text-3xl font-bold text-white mb-2">LUNAIREFINE</h1>
+        <p className="font-[gamma] text-xl text-gray-350 text-center">
+          Cultivator on Heavenly Network
         </p>
         <a
           href="https://debank.com/profile/0x9111C47492a9043D12af0E6c46D57560eeBCD9D4"
-          className="mt-5 bg-black text-white border border-white px-5 py-1.5 rounded-3xl shadow-md hover:bg-gray-800 transition-colors"
+          className="mt-5 bg-black/100 text-white border border-white px-5 py-1.5 rounded-3xl shadow-md hover:bg-white hover:text-black transition-colors"
         >
-          OnChain
+          Onchain
         </a>
       </div>
 

@@ -38,11 +38,11 @@ export default function Header(): JSX.Element {
           <div className="flex-shrink-0 flex items-center space-x-2">
             <a href="#landing" className="flex items-center space-x-2">
               <Image src={Logo} width={40} height={40} alt="Logo" className="rounded-lg" />
-              <span className="font-bold text-xl text-white">LUNAIREFINE</span>
+              <span className="font-[beta] font-bold text-xl text-white">LUNAIREFINE</span>
             </a>
           </div>
 
-          <div className="flex md:hidden">
+          {/* <div className="flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -61,7 +61,7 @@ export default function Header(): JSX.Element {
                 </svg>
               )}
             </button>
-          </div>
+          </div> */}
 
           <nav className="hidden md:flex flex-grow justify-center space-x-6">
             {/* <a href="#home" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('home')}>Home</a> */}
