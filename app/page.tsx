@@ -8,7 +8,7 @@ import Deployed from './components/deployed';
 
 export default function Home(): JSX.Element {
   return (
-    <div className="body">
+    <div>
       <Header/>
       <Landing/>
       <About/>

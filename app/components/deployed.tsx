@@ -1,6 +1,3 @@
-// File: components/FrameworksGrid.tsx
-// Pastikan Anda sudah menginstall Tailwind CSS di proyek Next.js Anda.
-
 import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import ETH from './assets/eth.png';

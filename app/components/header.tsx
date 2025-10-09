@@ -1,91 +1,103 @@
 "use client";
-import { useState, useEffect, JSX } from 'react';
+import { useState, useEffect, MouseEvent } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Logo from './assets/logo.png';
 
-export default function Header(): JSX.Element {
+const navLinks = [
+  { href: 'landing', label: 'Home', type: 'scroll' },
+  { href: '/#', label: 'Build', type: 'link' },
+];
+
+const MenuIcon = () => (
+  <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+  </svg>
+);
+
+const XIcon = () => (
+  <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+  </svg>
+);
+
+export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
+    const handleScroll = () => { setIsScrolled(window.scrollY > 10) };
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleScrollTo = (id: string) => {
+  const handleScrollTo = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setIsOpen(false);
     }
   };
 
+  const renderLink = (link: typeof navLinks[0], mobile = false) => {
+    const className = mobile 
+      ? "text-white hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium"
+      : "text-white hover:text-gray-300 transition-colors";
+      
+    if (link.type === 'link') {
+      return <Link href={link.href} className={className}>{link.label}</Link>;
+    }
+    return <a href={`#${link.href}`} className={className} onClick={(e) => handleScrollTo(e, link.href)}>{link.label}</a>;
+  };
+
+  const contactButtonClasses = "bg-transparent text-white border border-white px-4 py-2 rounded-full font-semibold shadow-md hover:bg-white hover:text-black transition-colors";
+
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/30 backdrop-blur-md' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/50 backdrop-blur-lg' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0 flex items-center space-x-2">
-            <a href="#landing" className="flex items-center space-x-2">
+        <div className="grid grid-cols-2 md:grid-cols-3 items-center h-16">
+          
+          <div className="flex justify-start">
+            <a href="#landing" onClick={(e) => handleScrollTo(e, 'landing')} className="flex items-center space-x-2">
               <Image src={Logo} width={40} height={40} alt="Logo" className="rounded-lg" />
               <span className="font-[beta] font-bold text-xl text-white">LUNAIREFINE</span>
             </a>
           </div>
 
-          {/* <div className="flex md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded={isOpen ? 'true' : 'false'}
-            >
-              <span className="sr-only">Open main menu</span>
-              {!isOpen ? (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-              ) : (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              )}
-            </button>
-          </div> */}
-
-          <nav className="hidden md:flex flex-grow justify-center space-x-6">
-            {/* <a href="#home" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('home')}>Home</a> */}
-            {/* <a href="#about" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('about')}>About</a> */}
-            {/* <a href="#network" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('network')}>Network</a> */}
-            {/* <a href="#project" className="hover:text-[#abf8f3]" onClick={() => handleScrollTo('project')}>Project</a> */}
+          <nav className="hidden md:flex justify-self-center items-center space-x-8">
+            {navLinks.map((link) => <div key={link.href}>{renderLink(link)}</div>)}
           </nav>
-
-          <div className="hidden md:flex items-center ml-20">
-            <a href="https://t.me/lunairefine" className="bg-black text-white border border-white px-4 py-2 rounded-3xl shadow-md hover:bg-gray-800">
+          
+          <div className="flex items-center justify-end">
+             <a href="https://t.me/lunairefine" className={`hidden md:block ${contactButtonClasses}`}>
               Contact
             </a>
+            
+            <div className="flex md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                type="button"
+                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 focus:outline-none"
+                aria-controls="mobile-menu"
+                aria-expanded={isOpen}
+              >
+                <span className="sr-only">Open main menu</span>
+                {isOpen ? <XIcon /> : <MenuIcon />}
+              </button>
+            </div>
           </div>
+
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-black absolute top-16 left-0 w-full py-4">
-          <div className="flex flex-col items-center space-y-6">
-            <a href="#landing" className="text-white text-xl hover:text-gray-300" onClick={() => handleScrollTo('landing')}>Home</a>
-            <a href="#about" className="text-white text-xl hover:text-gray-300" onClick={() => handleScrollTo('about')}>About</a>
-            <a href="#network" className="text-white text-xl hover:text-gray-300" onClick={() => handleScrollTo('network')}>Network</a>
-            {/* <a href="#project" className="text-white text-xl hover:text-gray-300" onClick={() => handleScrollTo('project')}>Project</a> */}
-            <a href="https://t.me/lunairefine" className="bg-black text-white border border-white px-4 py-2 rounded-3xl shadow-md hover:bg-gray-800">Contact</a>
+        <div className="md:hidden bg-black/50 backdrop-blur-lg" id="mobile-menu">
+          <div className="flex flex-col items-center space-y-4 px-2 pt-2 pb-6">
+            {navLinks.map((link) => <div key={link.href}>{renderLink(link, true)}</div>)}
+            <a href="https://t.me/lunairefine" className={`mt-4 w-fit ${contactButtonClasses}`}>
+              Contact
+            </a>
           </div>
         </div>
       )}
