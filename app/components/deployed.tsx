@@ -1,3 +1,4 @@
+"Use Client"
 import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import ETH from './assets/eth.png';
