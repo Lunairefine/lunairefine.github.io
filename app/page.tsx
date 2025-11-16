@@ -1,3 +1,4 @@
+"Use Client"
 import Image from 'next/image';
 import { JSX } from 'react';
 import Header from './components/header';
