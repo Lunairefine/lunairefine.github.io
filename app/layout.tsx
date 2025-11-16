@@ -15,13 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "lunairefine@server:~",
   description: "I can show you Divine Magic",
-  other: {
-    "fc:frame": "vNext",
-    "fc:frame:image": "https://raw.githubusercontent.com/Lunairefine/lunairefine.github.io/refs/heads/main/app/components/assets/frame.png",
-    "fc:frame:button:1": "Mulai",
-    "fc:frame:button:1:action": "post",
-    "fc:frame:post_url": "https://lunairefine.vercel.app/api/frame"
-  }
 };
 
 export default function RootLayout({
