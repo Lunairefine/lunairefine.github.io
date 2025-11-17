@@ -29,7 +29,6 @@ const cardData: CardProps[] = [
 function ImageCard({ imageSrc, title, link, idTag }: CardProps) {
   return (
     <div className="border border-[rgba(255,255,255,0.12)] bg-white/10 backdrop-blur-lg rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
-      {/* Bagian Gambar */}
       <div className="relative w-full aspect-square">
         <img
           src={imageSrc}

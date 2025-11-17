@@ -25,7 +25,7 @@ const socialLinks = [
 export default function Landing() {
   return (
     <main className="flex flex-col min-h-screen bg-black relative overflow-x-hidden">
-      <Aurora />
+      <Aurora/>
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div 
           className="w-[500px] h-[450px] bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 opacity-20 blur-3xl rounded-full animate-aurora" 

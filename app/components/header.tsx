@@ -1,11 +1,10 @@
 "use client";
-import { useState, useEffect, MouseEvent } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import Logo from './assets/logo.png';
+import { useState, useEffect } from 'react';
+
+const logoPath = '/media/images/logo.png';
 
 const navLinks = [
-  { href: '#', label: 'Home', type: 'scroll' },
+  { href: '/', label: 'Home', type: 'link' },
   { href: '/build', label: 'Build', type: 'link' },
   { href: '/analytics', label: 'Analytics', type: 'link' },
 ];
@@ -23,23 +22,18 @@ const XIcon = () => (
 );
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => { setIsScrolled(window.scrollY > 10) };
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
-
-  const handleScrollTo = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsOpen(false);
-    }
-  };
 
   const renderLink = (link: typeof navLinks[0], mobile = false) => {
     const className = mobile 
@@ -47,31 +41,42 @@ export default function Header() {
       : "text-white hover:text-gray-300 transition-colors";
       
     if (link.type === 'link') {
-      return <Link href={link.href} className={className}>{link.label}</Link>;
+      return <a href={link.href} className={className} onClick={() => setIsOpen(false)}>{link.label}</a>;
     }
-    return <a href={`#${link.href}`} className={className} onClick={(e) => handleScrollTo(e, link.href)}>{link.label}</a>;
+    return <a href={link.href} className={className} onClick={() => setIsOpen(false)}>{link.label}</a>;
   };
 
   const contactButtonClasses = "bg-transparent text-white border border-white px-4 py-2 rounded-full font-semibold shadow-md hover:bg-white hover:text-black transition-colors";
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/50 backdrop-blur-lg' : 'bg-transparent'}`}>
+    <header className={`
+      fixed top-0 left-0 w-full z-50 transition-all duration-300
+      ${isScrolled ? 'bg-black/50 backdrop-blur-lg' : 'bg-transparent'}
+    `}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-3 items-center h-16">
           
           <div className="flex justify-start">
-            <a href="#landing" onClick={(e) => handleScrollTo(e, 'landing')} className="flex items-center space-x-2">
-              <Image src={Logo} width={40} height={40} alt="Logo" className="rounded-lg" />
+            <a href="/" className="flex items-center space-x-2">
+              <img 
+                src={logoPath} 
+                width={40} 
+                height={40} 
+                alt="Logo" 
+                className="rounded-lg w-10 h-10"
+              />
               <span className="font-[beta] font-bold text-xl text-white">LUNAIREFINE</span>
             </a>
           </div>
 
           <nav className="hidden md:flex justify-self-center items-center space-x-8">
-            {navLinks.map((link) => <div key={link.href}>{renderLink(link)}</div>)}
+            {navLinks.map((link) => (
+              <div key={link.label}>{renderLink(link)}</div>
+            ))}
           </nav>
           
           <div className="flex items-center justify-end">
-             <a href="https://t.me/lunairefine" className={`hidden md:block ${contactButtonClasses}`}>
+             <a href="https://t.me/lunairefine" target="_blank" rel="noopener noreferrer" className={`hidden md:block ${contactButtonClasses}`}>
               Contact
             </a>
             
@@ -95,8 +100,10 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden bg-black/50 backdrop-blur-lg" id="mobile-menu">
           <div className="flex flex-col items-center space-y-4 px-2 pt-2 pb-6">
-            {navLinks.map((link) => <div key={link.href}>{renderLink(link, true)}</div>)}
-            <a href="https://t.me/lunairefine" className={`mt-4 w-fit ${contactButtonClasses}`}>
+            {navLinks.map((link) => (
+              <div key={link.label}>{renderLink(link, true)}</div>
+            ))}
+            <a href="https://t.me/lunairefine" target="_blank" rel="noopener noreferrer" className={`mt-4 w-fit ${contactButtonClasses}`}>
               Contact
             </a>
           </div>
