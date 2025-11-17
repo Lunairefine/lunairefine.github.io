@@ -1,6 +1,5 @@
 import { SVGProps } from "react";
 
-// Menerima props SVG standar agar bisa di-style dari luar jika perlu
 type IconProps = SVGProps<SVGSVGElement>;
 
 export const FarcasterIcon = (props: IconProps) => (

@@ -4,6 +4,7 @@ import Header from './components/header';
 import Landing from './components/home';
 import About from './components/about';
 import Deployed from './components/deployed';
+import Footer from './components/footer';
 
 export const metadata = {
   title: "Lunairefine Webased",
@@ -25,7 +26,6 @@ export const metadata = {
   },
 };
 
-
 export default function Home(): JSX.Element {
   return (
     <div>
@@ -33,6 +33,7 @@ export default function Home(): JSX.Element {
       <Landing/>
       <About/>
       <Deployed/>
+      <Footer/>
     </div>
   );
 }
