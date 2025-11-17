@@ -46,7 +46,7 @@ function ImageCard({ imageSrc, title, link, idTag }: CardProps) {
           {title}
         </h3>
         <a
-          href={`https://${link}`} // Tambahkan https:// untuk link eksternal
+          href={`https://${link}`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-teal-400 text-sm hover:text-teal-300 transition-colors block mb-4 truncate"
@@ -64,8 +64,8 @@ function ImageCard({ imageSrc, title, link, idTag }: CardProps) {
 export default function ImageCardGrid() {
   return (
     <div className="bg-black min-h-screen p-8 md:p-12 font-sans mt-10">
-      <h1 className="text-3xl sm:text-4xl font-bold text-white text-center mb-8 md:mb-12">
-        Whats Im Build
+      <h1 className="text-3xl sm:text-4xl font-bold text-teal-200 text-center mb-8 md:mb-12">
+        Explore what you want
       </h1>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {cardData.map((card) => (
