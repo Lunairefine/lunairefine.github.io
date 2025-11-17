@@ -1,15 +1,15 @@
 "use client"
 import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
-import ETH from './assets/eth.png';
-import ARB from './assets/arb.png';
-import OP from './assets/op.png';
-import SOLANA from './assets/sol.png';
-import BASE from './assets/base.png';
-import NEAR from './assets/near.png';
-import LINEA from './assets/linea.png';
-import UNICHAIN from './assets/unichain.png';
 
+const ETH = "/media/networks/eth.png";
+const ARB = "/media/networks/arb.png";
+const OP = "/media/networks/op.png";
+const SOLANA = "/media/networks/sol.png"; 
+const BASE = "/media/networks/base.png";
+const NEAR = "/media/networks/near.png";
+const LINEA = "/media/networks/linea.png";
+const UNICHAIN = "/media/networks/unichain.png";
 
 const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState<{width: number | undefined}>({

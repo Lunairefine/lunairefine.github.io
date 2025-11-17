@@ -8,7 +8,7 @@ type ProjectCardProps = {
   tags: string[];
 };
 
-export function ProjectCard({ title, imageUrl, liveUrl, description, tags }: ProjectCardProps) {
+export default function ProjectCard({ title, imageUrl, liveUrl, description, tags }: ProjectCardProps) {
   return (
     <div className="bg-[#111827]/40 border border-gray-800 rounded-xl overflow-hidden flex flex-col h-full transition-transform duration-300 hover:scale-105 hover:border-gray-600">
       <div className="relative w-full aspect-video"> 

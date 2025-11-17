@@ -5,8 +5,9 @@ import Link from 'next/link';
 import Logo from './assets/logo.png';
 
 const navLinks = [
-  { href: 'landing', label: 'Home', type: 'scroll' },
-  { href: '/#', label: 'Build', type: 'link' },
+  { href: '#', label: 'Home', type: 'scroll' },
+  { href: '/build', label: 'Build', type: 'link' },
+  { href: '/analytics', label: 'Analytics', type: 'link' },
 ];
 
 const MenuIcon = () => (
