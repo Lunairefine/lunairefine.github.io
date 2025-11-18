@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "js-sha3": "^0.9.3",
     "next": "^15.4.5",
     "ogl": "^1.0.11",
     "react": "^19.0.0",
