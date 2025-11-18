@@ -9,7 +9,7 @@ const cardData: CardProps[] = [
   {
     imageSrc: '/media/images/image1.png',
     title: 'Elegant Portrait',
-    link: 'lunairefine.vercel.app/test',
+    link: '/build/codec',
     idTag: '1412',
   },
   {
