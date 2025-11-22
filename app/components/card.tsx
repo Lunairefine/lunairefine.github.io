@@ -33,7 +33,6 @@ export default function ProjectCard({ title, imageUrl, liveUrl, description, tag
         <p className="text-gray-400 mt-2 text-xs font-light flex-grow"> 
           {description}
         </p>
-
         <div className="mt-auto pt-3 flex flex-wrap gap-1.5">
           {tags.map((tag) => (
             <span key={tag} className="bg-teal-900/50 text-teal-300 text-[10px] font-semibold px-2 py-0.5 rounded-full">

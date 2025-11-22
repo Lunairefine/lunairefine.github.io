@@ -1,6 +1,8 @@
-"use client";
-
+"use client"
 import { useState, useMemo } from "react";
+import "dotenv/config";
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 const CODEC_OPTIONS = [
   { id: "base64", name: "Base64", type: "codec" },
@@ -12,8 +14,6 @@ const CODEC_OPTIONS = [
   { id: "abi", name: "ABI Encoding/Decoding", type: "codec" },
   { id: "ipfs", name: "IPFS CID Builder/Decoder", type: "codec" }
 ];
-
-const API_URL = "https://encoding-dev-lunairefine.vercel.app/api";
 
 export default function Page() {
   const [input, setInput] = useState("");
@@ -52,7 +52,6 @@ export default function Page() {
   const requestApi = async (action: "encode" | "decode") => {
     try {
       setIsLoading(true);
-
       const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -63,7 +62,6 @@ export default function Page() {
           types: ["string"]
         })
       });
-
       const json = await res.json();
       setOutput(safeOutput(json.result || json.error));
     } catch (e: any) {
@@ -76,9 +74,7 @@ export default function Page() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-black mt-10 p-6 text-white">
       <div className="w-full max-w-2xl space-y-6">
-
         <h1 className="text-3xl font-bold">Web3 Codec Utility</h1>
-
         <select
           value={selectedCodecId}
           onChange={(e) => setSelectedCodecId(e.target.value)}
@@ -90,7 +86,6 @@ export default function Page() {
             </option>
           ))}
         </select>
-
         <div className="space-y-2">
           <label className="text-sm text-gray-400">Input</label>
           <textarea
@@ -101,7 +96,6 @@ export default function Page() {
             className="w-full h-40 p-3 bg-gray-800 rounded-md font-mono resize-none"
           />
         </div>
-
         <div className="grid grid-cols-2 gap-4">
           <button
             onClick={() => requestApi("encode")}
@@ -110,7 +104,6 @@ export default function Page() {
           >
             {isHash ? "Hash" : "Encode"}
           </button>
-
           <button
             onClick={() => requestApi("decode")}
             disabled={isLoading || isHash}
@@ -119,7 +112,6 @@ export default function Page() {
             Decode
           </button>
         </div>
-
         <div className="space-y-2">
           <label className="text-sm text-gray-400">Output</label>
           <textarea

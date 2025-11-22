@@ -1,4 +1,4 @@
-"use client";
+
 import Image from "next/image";
 import PFP from './assets/lunairefine.png';
 import Aurora from "./aurora";
@@ -32,7 +32,6 @@ export default function Landing() {
           style={{ top: '0%', left: '50%', transform: 'translateX(-50%)', position: 'absolute' }}
         ></div>
       </div>
-
       <div className="flex flex-col items-center justify-center flex-grow z-10 px-2">
         <Image
           src={PFP}

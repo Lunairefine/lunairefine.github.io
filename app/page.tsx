@@ -1,10 +1,8 @@
-import Image from 'next/image';
-import { JSX } from 'react';
-import Header from './components/header';
-import Landing from './components/home';
-import About from './components/about';
-import Deployed from './components/deployed';
-import Footer from './components/footer';
+import Header from '@/app/components/header';
+import Landing from '@/app/components/home';
+import About from '@/app/components/about';
+import Deployed from '@/app/components/deployed';
+import Footer from '@/app/components/footer';
 
 export const metadata = {
   title: "Lunairefine Webased",
@@ -26,7 +24,7 @@ export const metadata = {
   },
 };
 
-export default function Home(): JSX.Element {
+export default function Home() {
   return (
     <div>
       <Header/>

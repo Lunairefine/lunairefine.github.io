@@ -197,7 +197,6 @@ const FrameworksGrid = () => {
         <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl my-12">
           Deployed Across
         </h1>
-
         <div 
           className="relative w-full py-8 overflow-hidden" 
           style={{

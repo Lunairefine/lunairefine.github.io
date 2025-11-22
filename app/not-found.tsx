@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const notFoundImage = "/404.png";
 
 export default function NotFound() {
@@ -12,11 +10,8 @@ export default function NotFound() {
         height={300}
         className="mb-8"
       />
-
-      {/* tampilan default-style Next.js */}
       <h1 className="text-4xl font-bold mb-2">404</h1>
       <p className="text-lg opacity-70">This page could not be found.</p>
-
     </div>
   );
 }

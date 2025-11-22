@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { useState, useEffect } from 'react';
 
 const logoPath = '/media/images/logo.png';
@@ -68,18 +68,15 @@ export default function Header() {
               <span className="font-[beta] font-bold text-xl text-white">LUNAIREFINE</span>
             </a>
           </div>
-
           <nav className="hidden md:flex justify-self-center items-center space-x-8">
             {navLinks.map((link) => (
               <div key={link.label}>{renderLink(link)}</div>
             ))}
           </nav>
-          
           <div className="flex items-center justify-end">
              <a href="https://t.me/lunairefine" target="_blank" rel="noopener noreferrer" className={`hidden md:block ${contactButtonClasses}`}>
               Contact
             </a>
-            
             <div className="flex md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -93,7 +90,6 @@ export default function Header() {
               </button>
             </div>
           </div>
-
         </div>
       </div>
 
