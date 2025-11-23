@@ -2,7 +2,7 @@
 import { useState, useMemo } from "react";
 import "dotenv/config";
 
-const API_URL = "https://encoding-dev-lunairefine.vercel.app/api";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 const CODEC_OPTIONS = [
   { id: "base64", name: "Base64", type: "codec" },
