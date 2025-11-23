@@ -4,17 +4,21 @@
     "version": "1",
     "iconUrl": "https://lunairefine.vercel.app/media/images/logo.png",
     "homeUrl": "https://lunairefine.vercel.app",
-    "imageUrl": "https://lunairefine.vercel.app/image.png",
-    "splashImageUrl": "https://lunairefine.vercel.app/splash.png",
+    "imageUrl": "https://lunairefine.vercel.app/media/images/frame.png",
+    "splashImageUrl": "https://lunairefine.vercel.app/media/images/logo.png",
     "splashBackgroundColor": "#000000",
     "webhookUrl": "https://lunairefine.vercel.app/api/webhook",
     "subtitle": "Lunairefine Dashboard",
     "description": "Do you wanna coffee?",
-    "primaryCategory": "social"
+    "primaryCategory": "social",
+    "buttonTitle": "Coffee Time"
   },
   "accountAssociation": {
     "header": "eyJmaWQiOjU0ODczNSwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDk1MDU2QUM2QUY2YjMzNjg2MTY2MkQ4N0YyNzRBODgyNzEzZmUxNkUifQ",
     "payload": "eyJkb21haW4iOiJwcmUtbHVuYWlyZWZpbmUtZ2l0aHViLWlvLnZlcmNlbC5hcHAifQ",
     "signature": "tDPv5yeoMwFUCA29DdhQ0KCqxGMhL9R7nAf2lDWF4Dc3zMPJSU2QMNcQB4fLjfqN6+aocFREkC49AZgV6+I+sRw="
+  },
+  "BaseBuilder": {
+    "ownerAddress": "0x9111c47492a9043d12af0e6c46d57560eebcd9d4"
   }
 }
