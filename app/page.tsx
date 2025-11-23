@@ -3,6 +3,7 @@ import Landing from '@/app/components/home';
 import About from '@/app/components/about';
 import Deployed from '@/app/components/deployed';
 import Footer from '@/app/components/footer';
+import { sdk } from '@farcaster/miniapp-sdk'
 
 export const metadata = {
   title: "Lunairefine Webased",
@@ -35,3 +36,5 @@ export default function Home() {
     </div>
   );
 }
+
+await sdk.actions.ready()

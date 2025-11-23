@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@farcaster/miniapp-sdk": "^0.2.1",
     "dotenv": "^17.2.3",
     "js-sha3": "^0.9.3",
     "next": "^15.4.5",
