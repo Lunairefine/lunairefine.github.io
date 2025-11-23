@@ -3,7 +3,7 @@ import Landing from '@/app/components/home';
 import About from '@/app/components/about';
 import Deployed from '@/app/components/deployed';
 import Footer from '@/app/components/footer';
-import FarcasterProvider from './components/farcasterprovider';
+import Frame from '@/app/components/farcasterprovider'; 
 
 export const metadata = {
   title: "Lunairefine Webased",
@@ -28,12 +28,13 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <FarcasterProvider/>
+      <Frame>
       <Header/>
       <Landing/>
       <About/>
       <Deployed/>
       <Footer/>
+      </Frame>
     </div>
   );
 }
