@@ -1,0 +1,20 @@
+{
+  "frame": {
+    "name": "Lunairefine Web ",
+    "version": "1",
+    "iconUrl": "https://lunairefine.vercel.app/media/images/logo.png",
+    "homeUrl": "https://lunairefine.vercel.app",
+    "imageUrl": "https://lunairefine.vercel.app/image.png",
+    "splashImageUrl": "https://lunairefine.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "webhookUrl": "https://lunairefine.vercel.app/api/webhook",
+    "subtitle": "Lunairefine Dashboard",
+    "description": "Do you wanna coffee?",
+    "primaryCategory": "social"
+  },
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  }
+}
