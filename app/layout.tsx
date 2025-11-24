@@ -13,8 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "lunairefine@server:~",
-  description: "I can show you Divine Magic",
+  title: "Lunairefine",
+  description: "I am HeavenlyDemon",
+  openGraph: {
+    title: "lunairefine@server:~",
+    description: "I am HeavenlyDemon",
+    images: [
+      {
+        url: "/media/images/frame.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/media/images/frame.png"],
+  },
 };
 
 export default function RootLayout({

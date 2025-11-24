@@ -11,7 +11,7 @@ export default function NotFound() {
         className="mb-8"
       />
       <h1 className="text-4xl font-bold mb-2">404</h1>
-      <p className="text-lg opacity-70">This page could not be found.</p>
+      <p className="text-lg opacity-70">Stop! you are lost.</p>
     </div>
   );
 }
