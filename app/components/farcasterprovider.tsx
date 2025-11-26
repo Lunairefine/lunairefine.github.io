@@ -3,17 +3,19 @@
 import { useEffect, ReactNode } from "react";
 import { sdk } from "@farcaster/miniapp-sdk";
 
-// Mendefinisikan tipe props agar TypeScript tidak protes
-interface FarcasterProviderProps {
+interface Props {
   children: ReactNode;
 }
 
-export default function FarcasterProvider({ children }: FarcasterProviderProps) {
+export default function FarcasterProvider({ children }: Props) {
+
   useEffect(() => {
+    let isMounted = true;
+
     const initSdk = async () => {
       try {
-        // Memanggil ready() agar splash screen Farcaster hilang
         await sdk.actions.ready();
+        if (!isMounted) return;
         console.log("Farcaster SDK Ready!");
       } catch (error) {
         console.error("Farcaster SDK Init Error:", error);
@@ -21,9 +23,11 @@ export default function FarcasterProvider({ children }: FarcasterProviderProps) 
     };
 
     initSdk();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
-  // Kita langsung render children tanpa menunggu loading
-  // agar UI tetap muncul meskipun SDK belum siap sepenuhnya
   return <>{children}</>;
 }

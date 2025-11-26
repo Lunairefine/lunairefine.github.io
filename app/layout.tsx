@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import FarcasterProvider from "@/app/components/farcasterprovider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Lunairefine",
   description: "I am HeavenlyDemon",
+  metadataBase: new URL('https://lunairefine.vercel.app'),
   openGraph: {
     title: "lunairefine@server:~",
     description: "I am HeavenlyDemon",
@@ -42,7 +44,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <FarcasterProvider>
         {children}
+        </FarcasterProvider>
       </body>
     </html>
   );
