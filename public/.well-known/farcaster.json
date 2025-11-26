@@ -14,6 +14,11 @@
     "primaryCategory": "art-creativity",
     "heroImageUrl": "https://lunairefine.vercel.app/media/images/syntax.png"
   },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjU0ODczNSwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDkxMTFDNDc0OTJhOTA0M0QxMmFmMEU2YzQ2RDU3NTYwZWVCQ0Q5RDQifQ",
+    "payload": "eyJkb21haW4iOiJsdW5haXJlZmluZS52ZXJjZWwuYXBwIn0",
+    "signature": "u77CAHu8KX9TSab1slfMcHqq8ralKkxeROCpO9b1ecgMlSo19RkYoeaAf7yjFcnhjvCZTqeqO/Zs98F2Y4LhNRs="
+  },
   "BaseBuilder": {
     "ownerAddress": "0x9111c47492a9043d12af0e6c46d57560eebcd9d4"
   }
