@@ -36,7 +36,7 @@ const cardData: CardProps[] = [
 function ImageCard({ imageSrc, title, link, idTag, href }: Omit<CardProps, 'path'> & { href: string }) {
   return (
     <a href={href}
-      className="block border border-[rgba(255,255,255,0.12)] bg-white/10 backdrop-blur-lg rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group cursor-pointer">
+      className="block border border-[rgba(255,255,255,0.12)] bg-white/5 backdrop-blur-lg rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group cursor-pointer">
       <div className="relative w-full aspect-square">
         <img
           src={imageSrc}
@@ -64,8 +64,8 @@ function ImageCard({ imageSrc, title, link, idTag, href }: Omit<CardProps, 'path
 
 export default function ImageCardGrid() {
   return (
-    <div className="bg-black min-h-screen p-8 md:p-12 font-sans mt-10">
-      <h1 className="text-3xl sm:text-4xl font-bold text-teal-200 text-center mb-8 md:mb-12">
+    <div className="bg-black min-h-screen p-8 md:p-12 font-sans">
+      <h1 className="text-3xl sm:text-4xl font-bold text-teal-200 text-center mb-8  mt-10 md:mb-12">
         Explore what you want
       </h1>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">

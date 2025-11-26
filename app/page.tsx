@@ -6,12 +6,12 @@ import Footer from '@/app/components/footer';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header/>
       <Landing/>
       <About/>
       <Deployed/>
       <Footer/>
-    </div>
+    </>
   );
 }

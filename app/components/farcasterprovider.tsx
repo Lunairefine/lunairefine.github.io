@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { useEffect, ReactNode } from "react";
 import { sdk } from "@farcaster/miniapp-sdk";
 

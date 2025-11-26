@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import PFP from './assets/lunairefine.png';
 import Aurora from "./aurora";
