@@ -2,9 +2,9 @@
   "frame": {
     "name": "Lunairefine Web ",
     "version": "1",
-    "iconUrl": "https://lunairefine.vercel.app/media/images/logo.png",
-    "homeUrl": "https://lunairefine.vercel.app",
-    "imageUrl": "https://lunairefine.vercel.app/media/images/frame.png",
+    "iconUrl": "https://pre-lunairefine-github-io.vercel.app/media/images/logo.png",
+    "homeUrl": "https://pre-lunairefine-github-io.vercel.app",
+    "imageUrl": "https://pre-lunairefine-github-io.vercel.app/media/images/frame.png",
     "splashImageUrl": "https://lunairefine.vercel.app/media/images/logo.png",
     "splashBackgroundColor": "#000000",
     "webhookUrl": "https://lunairefine.vercel.app/api/webhook",
