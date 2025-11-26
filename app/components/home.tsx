@@ -43,7 +43,7 @@ export default function Landing() {
           Cultivator on Heavenly Network
         </p>
         <a
-          href="https://debank.com/profile/0x9111C47492a9043D12af0E6c46D57560eeBCD9D4"
+          href="https://www.base.org/name/lunairefine"
           className="mt-5 bg-black/100 text-white border border-white px-5 py-1.5 rounded-3xl shadow-md hover:bg-white hover:text-black transition-colors"
         >
           Onchain

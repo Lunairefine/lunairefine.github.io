@@ -20,15 +20,22 @@ export const metadata: Metadata = {
   openGraph: {
     title: "lunairefine@server:~",
     description: "I am HeavenlyDemon",
+    url: "https://lunairefine.vercel.app",
+    siteName: "Lunairefine",
     images: [
       {
         url: "/media/images/frame.png",
         width: 1200,
         height: 630,
+        alt: "Lunairefine OG Image",
       },
     ],
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
+    title: "Lunairefine",
+    description: "I am HeavenlyDemon",
     card: "summary_large_image",
     images: ["/media/images/frame.png"],
   },

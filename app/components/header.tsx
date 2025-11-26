@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 
-const logoPath = '/media/images/logo.png';
+const logoPath = '/media/images/syntax.png';
 
 const navLinks = [
   { href: '/', label: 'Home', type: 'link' },
