@@ -17,13 +17,13 @@ const cardData: CardProps[] = [
     idTag: 'Tools',
     path: 'codec',
   },
-  // {
-  //   imageSrc: '/media/images/image2.png',
-  //   title: 'Serene Expression',
-  //   link: 'lunairefine.vercel.app/test',
-  //   idTag: '1412',
-  //   path: 'hash', // Card 2 -> /build/hash
-  // },
+  {
+    imageSrc: '/media/images/image2.png',
+    title: 'Syntax Deployment',
+    link: 'syntax-lunaire.vercel.app/',
+    idTag: 'Art Creative',
+    path: 'syntax',
+  },
   // {
   //   imageSrc: '/media/images/image3.png',
   //   title: 'Gentle Smile',
