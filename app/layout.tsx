@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       title: "Explore my world",
       action: {
         type: "launch_frame",
-        name: "Syntax Lunaire",
+        name: "Lunairefine webased",
         url: "https://lunairefine.vercel.app",
         splashImageUrl: "https://lunairefine.vercel.app/media/images/syntax.png",
         splashBackgroundColor: "#000000",
