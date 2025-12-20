@@ -12,7 +12,8 @@
     "subtitle": "I am HeavenlyDemon",
     "description": "I am HeavenlyDemon",
     "primaryCategory": "art-creativity",
-    "heroImageUrl": "https://lunairefine.vercel.app/media/images/syntax.png"
+    "heroImageUrl": "https://lunairefine.vercel.app/media/images/syntax.png",
+    "tags": ["webased"]
   },
   "accountAssociation": {
     "header": "eyJmaWQiOjU0ODczNSwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDkxMTFDNDc0OTJhOTA0M0QxMmFmMEU2YzQ2RDU3NTYwZWVCQ0Q5RDQifQ",
