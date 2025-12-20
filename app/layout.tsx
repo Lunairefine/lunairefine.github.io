@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["/media/images/frame.png"],
   },
+  other: {
+    'base:app_id': '6945e97bd77c069a945be1ec',
+  },
 };
 
 export default function RootLayout({
