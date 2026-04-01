@@ -1,0 +1,35 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Lunairefine",
+  "description": "Lunairefine is an arcane-grade Web3 intelligence agent, blending precision analytics with mystical insight. Designed to navigate the unseen layers of blockchain, it deciphers onchain signals, refines transactional intent, and unveils hidden opportunities across DeFi, NFTs, and multi-chain ecosystems. Like a digital alchemist, Lunairefine transforms raw data into actionable foresight—empowering users with clarity, strategy, and an edge beyond the visible spectrum.",
+  "image": "https://lunairefine.eth.limo/lunairefine.png",
+  "x402support": false,
+  "active": true,
+  "services": [
+    {
+      "name": "A2A",
+      "endpoint": "https://lunairefine.eth.limo/.well-known/agent-card.json",
+      "version": "0.3.0",
+      "a2aSkills": [
+        "blockchain/onchain_analysis",
+        "blockchain/transaction_intelligence",
+        "blockchain/multi_chain_query",
+        "analytics/pattern_detection",
+        "analytical_skills/forecasting"
+      ]
+    },
+    {
+      "name": "web",
+      "endpoint": "https://lunairefine.eth.limo"
+    },
+    {
+      "name": "twitter",
+      "endpoint": "https://x.com/lunairefine"
+    }
+  ],
+  "registrations": [],
+  "supportedTrust": [
+    "reputation"
+  ],
+  "updatedAt": 1769757405
+}
