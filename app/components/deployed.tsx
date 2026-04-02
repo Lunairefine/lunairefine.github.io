@@ -115,11 +115,11 @@ const DummyIcon = ({ className }: { className?: string }) => (
 const blockchainIcons: Framework[] = [
   { name: 'Ethereum', icon: EthereumIcon, href: 'https://ethereum.org/', glowColor: '#627EEA' },
   { name: 'Arbitrum', icon: ArbitrumIcon, href: 'https://arbitrum.io/', glowColor: '#28A0F0' },
-  { name: 'Optimism', icon: OptimismIcon, href: 'https://www.optimism.io/', glowColor: '#FF0420' },
-  { name: 'Base', icon: BaseIcon, href: 'https://www.base.org/', glowColor: '#0052FF' },
+  { name: 'Optimism', icon: OptimismIcon, href: 'https://optimism.io/', glowColor: '#FF0420' },
+  { name: 'Base', icon: BaseIcon, href: 'https://base.org/', glowColor: '#0052FF' },
   { name: 'Solana', icon: SolanaIcon, href: 'https://solana.com/', glowColor: '#9945FF' },
   { name: 'Linea', icon: LineaIcon, href: 'https://linea.build/', glowColor: '#1EE9A7' },
-  { name: 'Unichain', icon: UnichainIcon, href: '#', glowColor: '#F50DB4' },
+  { name: 'Unichain', icon: UnichainIcon, href: 'https://unichain.org/', glowColor: '#F50DB4' },
   { name: 'Near', icon: NearIcon, href: 'https://near.org/', glowColor: '#FFFFFF' },
 ];
 
